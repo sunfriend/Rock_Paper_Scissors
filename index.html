@@ -15,21 +15,22 @@
         </div>
         <div class="selection-container">
             <div>
-                <label for="player-selection">Player:</label>
                 <input id="player-selection" type="text" readonly>
-            </div>
-            <div>
-                <label for="computer-selection">Computer:</label>
+                <label for="player-selection"><==( Player vs Computer )==></label>
                 <input id="computer-selection" type="text" readonly>
             </div>
         </div>
         <div class="summary-container">
-            <input id="result-output" type="text" readonly>
+            <input id="round-result" type="text" readonly>
         </div>
         <div class="buttons-container">
             <button id="rock" type="button" class="btn">Rock</button>
             <button id="paper" type="button" class="btn">Paper</button>
             <button id="scissors" type="button" class="btn">Scissors</button>
+        </div>
+        <div id="score">
+            <div class="player-score">PLAYER: <span>0</span></div>
+            <div class="computer-score">COMPUTER: <span>0</span></div>
         </div>
     </div>
 </body>

@@ -1,7 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Marck+Script&display=swap');
+
 * {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    font-family: 'Inconsolata', monospace;
+}
+
+input {
+    font-size: 1.5rem;
+    color: blue;
 }
 
 .rps-header h2 {
@@ -16,6 +24,25 @@
     justify-content: center;
 }
 
+#player-selection {
+    border: none;
+    text-align: right;
+    outline: none;
+    width: 6rem;
+}
+
+#computer-selection {
+    border: none;
+    outline: none;
+    width: 6rem;
+}
+
+#round-result {
+    border: none;
+    outline: none;
+    text-align: center;
+}
+
 .buttons-container {
     text-align: center;
     margin: 1rem 0;
@@ -23,12 +50,31 @@
 
 .btn {
     margin: 0 20px;
-    padding: 3rem;
     border-radius: 12px;
     outline: none;
+    width: 8rem;
+    height: 2rem;
+    text-align: center;
+    cursor: pointer;
+    transition: 100ms;
+}
+
+.btn:hover {
+    transform: scale(1.15);
 }
 
 .summary-container {
     text-align: center;
     margin: 3rem 0;
+}
+
+#score {
+    display: grid;
+    grid-template-columns: 15rem 15rem;
+    justify-content: space-evenly;
+    justify-items: center;
+}
+
+.player-score, .computer-score {
+    text-align: center;
 }
