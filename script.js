@@ -80,8 +80,10 @@ function drawResults(result) {
 function checkWinner(rounds = 5) {
      if (computerScoreCounter >= rounds) { 
        alert("Computer won the game!");
+       location.reload();
     }
     else if (playerScoreCounter >= rounds) {
         alert("Player won the game");
+        location.reload();
     }
 }
