@@ -4,6 +4,8 @@ const resultOutput = document.querySelector("#round-result")
 const computerChoice = document.querySelector("#computer-selection");
 const playerScoreDisplay = document.querySelector(".player-score");
 const computerScoreDisplay = document.querySelector(".computer-score")
+const audioClick = document.querySelector("#audio-click");
+
 let [playerScoreCounter, computerScoreCounter, roundsCounter] = [0, 0, 0];
 const choiceSelector = [{name: "rock", beats: "scissors"},
                         {name: "paper", beats: "rock"},
@@ -25,6 +27,10 @@ function computerSelection() {
 }
 
 function playRound(player, computer) {
+    if(audioClick) {
+        audioClick.currentTime = 0;
+        audioClick.play();
+}
     playerChoice.value = player[0].name;
     computerChoice.value = computer.name;
     playerChoice.style.setProperty("text-decoration", "none"); 
@@ -72,12 +78,10 @@ function drawResults(result) {
 }
 
 function checkWinner(rounds = 5) {
-    if (computerScoreCounter >= rounds) { 
-        alert("Computer won the game!");
-        location.reload();
+     if (computerScoreCounter >= rounds) { 
+       alert("Computer won the game!");
     }
     else if (playerScoreCounter >= rounds) {
         alert("Player won the game");
-        location.reload();
     }
 }
